@@ -1,6 +1,6 @@
 {
   "name": "root",
-  "version": "0.4.0",
+  "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev:play": "pnpm run dev --filter playground-basic",
@@ -20,16 +20,16 @@
     "setup",
     "vite-plugin"
   ],
-  "author": "Vben",
+  "author": "Hzy",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/vbenjs/vite-plugin-html"
+    "url": "https://github.com/iTHuangziyi/vite-plugin-vue-setup-support"
   },
   "bugs": {
-    "url": "https://github.com/vbenjs/vite-plugin-html/issues"
+    "url": "https://github.com/iTHuangziyi/vite-plugin-vue-setup-support/issues"
   },
-  "homepage": "https://github.com/vbenjs/vite-plugin-html/tree/master/#readme",
+  "homepage": "https://github.com/iTHuangziyi/vite-plugin-vue-setup-support/#readme",
   "devDependencies": {
     "@commitlint/cli": "^16.1.0",
     "@commitlint/config-conventional": "^16.0.0",

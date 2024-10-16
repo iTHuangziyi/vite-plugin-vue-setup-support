@@ -12,16 +12,11 @@ export function supportScriptName(code: string, id: string) {
     if (name) {
       str().appendLeft(
         0,
-        `<script ${lang ? `lang="${lang}"` : ''}>
-import { defineComponent } from 'vue'
-export default defineComponent({
-  name: '${name}',
-})
-</script>\n`,
+        `<script ${lang ? `lang="${lang}"` : ''}>import { defineComponent } from 'vue';export default defineComponent({name: '${name}',})</script>\n`,
       )
     }
     return {
-      map: str().generateMap(),
+      map: str().generateDecodedMap(),
       code: str().toString(),
     }
   } else {

@@ -12,6 +12,6 @@
   "devDependencies": {
     "@vitejs/plugin-vue": "^2.1.0",
     "@vue/compiler-sfc": "^3.2.29",
-    "vite-plugin-vue-setup-extend": "workspace:*"
+    "vite-plugin-vue-setup-support": "workspace:*"
   }
 }

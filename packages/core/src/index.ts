@@ -13,6 +13,7 @@ export default (options: ExtendOptions = {}): Plugin => {
   return {
     name: 'vite:setup-name-support',
     enforce: 'pre',
+    // @ts-ignore
     async transform(code, id) {
       if (!/\.vue$/.test(id)) {
         return null
