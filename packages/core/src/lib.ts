@@ -3,6 +3,7 @@ import MagicString from 'magic-string'
 
 export function supportScriptName(code: string, id: string) {
   let s: MagicString | undefined
+  const FILENAME_RE = /.*\/(\S*)/
   const str = () => s || (s = new MagicString(code))
   const { descriptor } = parse(code)
   if (!descriptor.script && descriptor.scriptSetup) {
@@ -15,8 +16,13 @@ export function supportScriptName(code: string, id: string) {
         `<script ${lang ? `lang="${lang}"` : ''}>import { defineComponent } from 'vue';export default defineComponent({name: '${name}',})</script>`,
       )
     }
+    
+    const map = str().generateMap({ hires: true })
+    const filename = FILENAME_RE.exec(id)![1]
+    map.file = filename
+    map.sources = [filename]
     return {
-      map: str().generateDecodedMap(),
+      map,
       code: str().toString(),
     }
   } else {
